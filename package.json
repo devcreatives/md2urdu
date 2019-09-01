@@ -1,7 +1,7 @@
 {
-	"name": "text-rtl",
-	"displayName": "text-rtl",
-	"description": "converts ltr text and code to rtl text",
+	"name": "md2urdu",
+	"displayName": "md2urdu",
+	"description": "converts any text in .md file to urdu",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.37.0"
@@ -16,8 +16,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.textrtl",
-				"title": "Convert file text to ltr to rtl"
+				"command": "extension.md2urdu",
+				"title": "converts any text in .md file to urdu"
 			}
 		]
 	},

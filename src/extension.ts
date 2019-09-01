@@ -14,11 +14,13 @@ export function activate(context: vscode.ExtensionContext) {
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
   let disposable = vscode.commands.registerCommand(
-    "extension.textrtl",
+    "extension.md2urdu",
     async () => {
       // The code you place here will be executed every time your command is executed
       // Display a message box to the user
-      vscode.window.showInformationMessage("Hello World! Welcome to text rtl");
+      vscode.window.showInformationMessage(
+        "Hello World! Welcome to .md language converter to urdu"
+      );
       // Getting information of current open file if that file is markdown get content of file
       await checkFileType();
     }
@@ -46,23 +48,25 @@ async function getFileContent(fileName: string) {
       const fileData = await data.toString();
       translate(fileData, { to: "ur" })
         .then(async (res: any) => {
-          if (!res) throw Error("Unable to convert");
+          if (!res) throw Error("Unable to convert to urdu");
           else {
             const urduText = res.text;
             await fs.writeFile(fileName, urduText, err => {
-              if (err) throw Error("Unable to convert");
+              if (err) throw Error("Unable to convert to urdu");
               vscode.window.showInformationMessage(
-                "File Successfully Converted"
+                ".md Successfully Converted to urdu"
               );
             });
           }
         })
         .catch((err: object) => {
-          throw Error("Unable to convert");
+          throw Error("Unable to convert to urdu");
         });
-    } else throw Error("Unable to convert");
+    } else throw Error("Unable to convert to urdu");
   });
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+  vscode.window.showInformationMessage("md2urdu is deactivated");
+}
