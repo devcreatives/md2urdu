@@ -2,9 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import * as fs from "fs";
-
-// Current Editor
-const editor = vscode.window.activeTextEditor;
+import translate from "@vitalets/google-translate-api";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -42,9 +40,27 @@ async function checkFileType() {
 }
 
 // this method is called for getting content of current file
-async function getFileContent(fileName) {
+async function getFileContent(fileName: string) {
   await fs.readFile(fileName, async (err, data) => {
-    const fileData = await data.toString();
+    if (!err) {
+      const fileData = await data.toString();
+      translate(fileData, { to: "ur" })
+        .then(async (res: any) => {
+          if (!res) throw Error("Unable to convert");
+          else {
+            const urduText = res.text;
+            await fs.writeFile(fileName, urduText, err => {
+              if (err) throw Error("Unable to convert");
+              vscode.window.showInformationMessage(
+                "File Successfully Converted"
+              );
+            });
+          }
+        })
+        .catch((err: object) => {
+          throw Error("Unable to convert");
+        });
+    } else throw Error("Unable to convert");
   });
 }
 
