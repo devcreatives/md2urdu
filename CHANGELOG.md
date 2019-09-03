@@ -4,6 +4,8 @@ All notable changes to the "md2urdu" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file, and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## md2urdu [1.1.0] (Currently Working) 
+
 ## md2urdu [1.0.0] - 2019-09-01 (Released) 
 ### Added
 - Added (Ctrl+Shift+P) command to convert md file added by [@viveksharmaui](https://github.com/viveksharmaui).
