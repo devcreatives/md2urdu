@@ -14,9 +14,9 @@ Our goal is to make this extension as simple as possible , as lite weight as pos
 
 ## Our Motivation
 
-[![md file in English](https://res.cloudinary.com/dwl34s9au/image/upload/v1568659785/69596527_2635273863366195_4969254922131341312_n_oh7kwz.jpg)]
+![md file in English](https://res.cloudinary.com/dwl34s9au/image/upload/v1568659785/69596527_2635273863366195_4969254922131341312_n_oh7kwz.jpg)
 
-[![md file in Urdu](https://res.cloudinary.com/dwl34s9au/image/upload/v1568659802/69227802_2635273870032861_4311501726088691712_n_mazvj1.jpg)]
+![md file in Urdu](https://res.cloudinary.com/dwl34s9au/image/upload/v1568659802/69227802_2635273870032861_4311501726088691712_n_mazvj1.jpg)
 
 ## Found bug 
 
