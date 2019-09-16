@@ -12,7 +12,7 @@ The purpose behind this extension is to convert md files to urdu. This extension
 
 Our goal is to make this extension as simple as possible , as lite weight as possible and as user friendly as posssible.
 
-## Our Motivation
+## Our motivation
 
 ![md file in English](https://res.cloudinary.com/dwl34s9au/image/upload/v1568659785/69596527_2635273863366195_4969254922131341312_n_oh7kwz.jpg)
 
