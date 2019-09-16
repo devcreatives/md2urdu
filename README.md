@@ -18,6 +18,6 @@ If you found any bug please add that bug in [issue](https://github.com/vivekshar
 
 ## How you can contribute
 
-This extension is open source anyone can contribute. we are always ready for new ideas and new functionalities so pull request are always welcome **Happy Contributing**. 
+This extension is open source anyone can contribute. we are always ready for new ideas and new functionalities so pull request are always welcome or see [CONTRIBUTING.md](https://github.com/viveksharmaui/.md2urdu-vscode-extension/blob/master/CONTRIBUTING.md) file for more information. 
 
-**Thanks**
+**Happy Contributing**
