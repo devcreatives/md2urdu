@@ -11,5 +11,9 @@
 		],
 		"triple-equals": true
 	},
-	"defaultSeverity": "warning"
+	"defaultSeverity": "warning",
+	"extends": [
+		"tslint:latest",
+		"tslint-config-prettier"
+	  ]
 }
