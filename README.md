@@ -26,4 +26,6 @@ If you found any bug please add that bug in [issue](https://github.com/Techistan
 
 This extension is open source anyone can contribute. we are always ready for new ideas and new functionalities so pull request are always welcome or see [CONTRIBUTING.md](https://github.com/Techistan/md2urdu/blob/master/CONTRIBUTING.md) file for more information. 
 
+We are thinking to go further with this, we are planing to convert any selected text to urdu from any file .ts, .js and others, so contribute in this project to prove your skills.
+
 **Happy Contributing**
