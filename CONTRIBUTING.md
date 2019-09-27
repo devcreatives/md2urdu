@@ -2,7 +2,7 @@
 
 ## Shipping a new functionality
  
-1. You can only contribute on UNRELEASE which our team is currently working on see [CHANGELOG.md](https://github.com/viveksharmaui/.md2urdu-vscode-extension/blob/master/CHANGELOG.md) file for more information of currently UNRELEASED version.
+1. You can only contribute on UNRELEASE which our team is currently working on see [CHANGELOG.md](https://github.com/Techistan/md2urdu/blob/master/CHANGELOG.md) file for more information of currently UNRELEASED version.
 2. Fork this repo.
 3. Pull latest UNRELEASED version branch.
 4. Contribute something great.

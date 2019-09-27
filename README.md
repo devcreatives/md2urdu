@@ -20,10 +20,10 @@ Our goal is to make this extension as simple as possible , as lite weight as pos
 
 ## Found bug 
 
-If you found any bug please add that bug in [issue](https://github.com/viveksharmaui/.md2urdu-vscode-extension/issues) section. so that our team will solve bug as soon as possible.
+If you found any bug please add that bug in [issue](https://github.com/Techistan/md2urdu/issues) section. so that our team will solve bug as soon as possible.
 
 ## How you can contribute
 
-This extension is open source anyone can contribute. we are always ready for new ideas and new functionalities so pull request are always welcome or see [CONTRIBUTING.md](https://github.com/viveksharmaui/.md2urdu-vscode-extension/blob/master/CONTRIBUTING.md) file for more information. 
+This extension is open source anyone can contribute. we are always ready for new ideas and new functionalities so pull request are always welcome or see [CONTRIBUTING.md](https://github.com/Techistan/md2urdu/blob/master/CONTRIBUTING.md) file for more information. 
 
 **Happy Contributing**
