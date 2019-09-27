@@ -32,10 +32,10 @@
 	},
 	"husky": {
 		"hooks": {
-		  "pre-commit": "npm run prettier",
-		  "pre-push":"npm run test"
+			"pre-commit": "npm run prettier",
+			"pre-push": "npm run test"
 		}
-	  },
+	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.6",
@@ -46,10 +46,10 @@
 		"mocha": "^6.1.4",
 		"prettier": "^1.18.2",
 		"tslint": "^5.12.1",
-		"vscode-test": "^1.0.2"
+		"vscode-test": "^1.0.2",
+		"typescript": "^3.3.1"
 	},
 	"dependencies": {
-		"@vitalets/google-translate-api": "^3.0.0",
-		"typescript": "^3.3.1"
+		"@vitalets/google-translate-api": "^3.0.0"
 	}
 }
