@@ -1,8 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode'
-import * as fs from 'fs'
-import translate from '@vitalets/google-translate-api'
+import * as vscode from 'vscode';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -20,53 +18,14 @@ export function activate(context: vscode.ExtensionContext) {
             // Display a message box to the user
             vscode.window.showInformationMessage(
                 'Hello World! Welcome to .md language converter to urdu'
-            )
-            // Getting information of current open file if that file is markdown get content of file
-            await checkFileType()
+            );
         }
-    )
+    );
 
-    context.subscriptions.push(disposable)
-}
-
-// this method is called for checking current open file
-async function checkFileType() {
-    await Promise.all(
-        vscode.workspace.textDocuments.map(async file => {
-            const { languageId, fileName } = file
-            if (languageId === 'markdown') {
-                await getFileContent(fileName)
-            }
-        })
-    )
-}
-
-// this method is called for getting content of current file
-async function getFileContent(fileName: string) {
-    await fs.readFile(fileName, async (err, data) => {
-        if (!err) {
-            const fileData = await data.toString()
-            translate(fileData, { to: 'ur' })
-                .then(async (res: any) => {
-                    if (!res) throw Error('Unable to convert to urdu')
-                    else {
-                        const urduText = res.text
-                        await fs.writeFile(fileName, urduText, err => {
-                            if (err) throw Error('Unable to convert to urdu')
-                            vscode.window.showInformationMessage(
-                                '.md Successfully Converted to urdu'
-                            )
-                        })
-                    }
-                })
-                .catch((err: object) => {
-                    throw Error('Unable to convert to urdu')
-                })
-        } else throw Error('Unable to convert to urdu')
-    })
+    context.subscriptions.push(disposable);
 }
 
 // this method is called when your extension is deactivated
 export function deactivate() {
-    vscode.window.showInformationMessage('md2urdu is deactivated')
+    vscode.window.showInformationMessage('md2urdu is deactivated');
 }

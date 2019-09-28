@@ -29,7 +29,7 @@
 		"pretest": "npm run compile",
 		"test": "node ./out/test/runTest.js",
 		"test:jest": "jest",
-		"prettier": "prettier --write src/*"
+		"prettier": "prettier --write src/**/*.ts"
 	},
 	"husky": {
 		"hooks": {
