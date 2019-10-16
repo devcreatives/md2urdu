@@ -13,7 +13,7 @@
 	"activationEvents": [
 		"onCommand:extension.md2urdu"
 	],
-	"main": "./out/extension.js",
+	"main": "./out/src/lib/extension.js",
 	"contributes": {
 		"commands": [
 			{

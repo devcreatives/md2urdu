@@ -1,6 +1,12 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import fs from 'fs';
+import translate from '@vitalets/google-translate-api';
+const CheckFileType = require('./internal/checkFileType');
+const GetFileContent = require('./internal/getFileContent');
+const WriteFileContent = require('./internal/writeFileContent');
+const Translate = require('./internal/translate');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -15,13 +21,56 @@ export function activate(context: vscode.ExtensionContext) {
         'extension.md2urdu',
         async () => {
             // The code you place here will be executed every time your command is executed
-            // Display a message box to the user
-            vscode.window.showInformationMessage(
-                'Hello World! Welcome to .md language converter to urdu'
-            );
+            const fileTypeResult = new CheckFileType(vscode);
+            const { checkFileType } = fileTypeResult;
+            const { isMDFile, filePath } = await checkFileType();
+            if (isMDFile) {
+                vscode.window.showInformationMessage(
+                    'Converting MD File To Urdu'
+                );
+                const getFileContentResult = new GetFileContent(vscode, fs);
+                const { getFileContent } = getFileContentResult;
+                const fileData = await getFileContent(filePath);
+                if (fileData) {
+                    const translateResult = new Translate(translate, vscode);
+                    const { translation } = translateResult;
+                    const fileDataInUrdu = await translation(fileData);
+                    if (fileDataInUrdu) {
+                        const writeFileContentResult = new WriteFileContent(
+                            vscode,
+                            fs
+                        );
+                        const { writeFileContent } = writeFileContentResult;
+                        const writeData = await writeFileContent(
+                            filePath,
+                            fileDataInUrdu
+                        );
+                        if (writeData) {
+                            vscode.window.showInformationMessage(
+                                'Successfully Converted MD File To Urdu'
+                            );
+                        } else {
+                            vscode.window.showInformationMessage(
+                                'Unable To Write Urdu Data In MD File'
+                            );
+                        }
+                    } else {
+                        vscode.window.showInformationMessage(
+                            'Unable To Translate MD File Data'
+                        );
+                    }
+                } else {
+                    vscode.window.showInformationMessage(
+                        'Unable To Get MD File Data'
+                    );
+                }
+            } else {
+                vscode.window.showInformationMessage(
+                    'Current File Is Not MD File'
+                );
+            }
         }
     );
-
     context.subscriptions.push(disposable);
 }
 

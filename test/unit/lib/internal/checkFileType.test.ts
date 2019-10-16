@@ -6,6 +6,6 @@ test('checking file type in editor', async () => {
     const { currentWorkSpace } = vscode
     const fileTypeResult = new CheckFileType(currentWorkSpace)
     const { checkFileType } = fileTypeResult
-    const response = await checkFileType()
-    expect(response).toBe(true)
+    const { isMDFile } = await checkFileType()
+    expect(isMDFile).toBe(true)
 })
