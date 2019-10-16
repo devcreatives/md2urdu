@@ -1,4 +1,5 @@
 # md2urdu (Visual Studio Code - Extension)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 ## Introduction
 
@@ -29,3 +30,19 @@ This extension is open source anyone can contribute. we are always ready for new
 We are thinking to go further with this, we are planing to convert any selected text to urdu from any file .ts, .js and others, so contribute in this project to prove your skills.
 
 **Happy Contributing**
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://viveksharmaui.js.org"><img src="https://avatars1.githubusercontent.com/u/28563357?v=4" width="100px;" alt="Vivek Anand Sharma"/><br /><sub><b>Vivek Anand Sharma</b></sub></a><br /><a href="#infra-viveksharmaui" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Tests">⚠️</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Code">💻</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/MirFahad58"><img src="https://avatars1.githubusercontent.com/u/31244700?v=4" width="100px;" alt="Mir Fahad Talpur"/><br /><sub><b>Mir Fahad Talpur</b></sub></a><br /><a href="https://github.com/Techistan/md2urdu/commits?author=MirFahad58" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
