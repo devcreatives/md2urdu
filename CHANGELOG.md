@@ -3,7 +3,7 @@
 All notable changes to the "md2urdu" extension will be documented in this file.
 
 ## md2urdu [1.1.0] (Currently Working) (Unreleased)
-
+- Added jest test cases unit/integration added by [@viveksharmaui](https://github.com/viveksharmaui).
 
 ## md2urdu [1.0.0] - 2019-09-01 (Released) 
 ### Added
