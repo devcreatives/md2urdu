@@ -30,8 +30,10 @@ export function activate(context: vscode.ExtensionContext) {
                 );
                 const getFileContentResult = new GetFileContent(vscode, fs);
                 const { getFileContent } = getFileContentResult;
-                const fileData = await getFileContent(filePath);
-                if (fileData) {
+                const { fileData, selectedTexted } = await getFileContent(
+                    filePath
+                );
+                if (fileData && !selectedTexted) {
                     const translateResult = new Translate(translate, vscode);
                     const { translation } = translateResult;
                     const fileDataInUrdu = await translation(fileData);
@@ -44,6 +46,40 @@ export function activate(context: vscode.ExtensionContext) {
                         const writeData = await writeFileContent(
                             filePath,
                             fileDataInUrdu
+                        );
+                        if (writeData) {
+                            vscode.window.showInformationMessage(
+                                'Successfully Converted MD File To Urdu'
+                            );
+                        } else {
+                            vscode.window.showInformationMessage(
+                                'Unable To Write Urdu Data In MD File'
+                            );
+                        }
+                    } else {
+                        vscode.window.showInformationMessage(
+                            'Unable To Translate MD File Data'
+                        );
+                    }
+                } else if (fileData && selectedTexted) {
+                    const translateResult = new Translate(translate, vscode);
+                    const { translation } = translateResult;
+                    const selectedTextInUrdu = await translation(
+                        selectedTexted
+                    );
+                    if (selectedTextInUrdu) {
+                        const fileDataWithSelectedText = fileData.replace(
+                            selectedTexted,
+                            selectedTextInUrdu
+                        );
+                        const writeFileContentResult = new WriteFileContent(
+                            vscode,
+                            fs
+                        );
+                        const { writeFileContent } = writeFileContentResult;
+                        const writeData = await writeFileContent(
+                            filePath,
+                            fileDataWithSelectedText
                         );
                         if (writeData) {
                             vscode.window.showInformationMessage(

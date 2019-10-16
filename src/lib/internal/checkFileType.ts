@@ -9,17 +9,16 @@ module.exports = class CheckFileType {
     }
     // this method is called for checking current open file
     checkFileType = async () => {
+        const vscode = this.vscode;
         let response;
         let filePath;
-        await Promise.all(
-            this.vscode.workspace.textDocuments.map(async (file: any) => {
-                const { languageId, fileName } = file;
-                if (languageId === 'markdown') {
-                    response = true;
-                    filePath = fileName;
-                }
-            })
-        );
+        const { _documentData } = vscode.window.activeTextEditor;
+        const { _languageId, _document } = _documentData;
+        const { fileName } = _document;
+        if (_languageId === 'markdown') {
+            response = true;
+            filePath = fileName;
+        }
         return { isMDFile: response, filePath };
     };
 };

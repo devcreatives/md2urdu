@@ -8,8 +8,8 @@ test('getting file content', async () => {
     const getFileContentResult = new GetFileContent(windowMessage, fs)
     const { getFileContent } = getFileContentResult
     const exampleMdPath = join(__dirname, 'example.md')
-    const response = await getFileContent(exampleMdPath)
-    expect(typeof response).toBe('string')
+    const { fileData } = await getFileContent(exampleMdPath)
+    expect(typeof fileData).toBe('string')
 })
 
 test('writing in file content', async () => {

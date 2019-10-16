@@ -14,8 +14,11 @@ module.exports = class GetFileContent {
         return new Promise(function(resolve: any, reject: any) {
             fs.readFile(fileName, async (err: any, data: any) => {
                 if (!err) {
+                    const selectedTexted = vscode.window.activeTextEditor.document.getText(
+                        vscode.window.activeTextEditor.selection
+                    );
                     const fileData = await data.toString();
-                    resolve(fileData);
+                    resolve({ fileData, selectedTexted });
                 } else {
                     vscode.window.showInformationMessage(
                         '.md Not Converted to urdu'
