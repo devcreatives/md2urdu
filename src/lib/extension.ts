@@ -81,26 +81,31 @@ export function activate(context: vscode.ExtensionContext) {
                             filePath,
                             fileDataWithSelectedText
                         );
+                        //Used variables instead of re writing the event again and again it self.
+                        let showInformationMessage = '';
                         if (writeData) {
-                            vscode.window.showInformationMessage(
-                                'Successfully Converted MD File To Urdu'
-                            );
-                        } else {
-                            vscode.window.showInformationMessage(
-                                'Unable To Write Urdu Data In MD File'
-                            );
+                            showInformationMessage = 'Successfully Converted MD File To Urdu';
                         }
-                    } else {
+                        else {
+                            showInformationMessage = 'Unable To Write Urdu Data In MD File';
+                        }
+                        vscode.window.showInformationMessage(
+                            showInformationMessage
+                        );
+                    }
+                    else {
                         vscode.window.showInformationMessage(
                             'Unable To Translate MD File Data'
                         );
                     }
-                } else {
+                }
+                else {
                     vscode.window.showInformationMessage(
                         'Unable To Get MD File Data'
                     );
                 }
-            } else {
+            }
+            else {
                 vscode.window.showInformationMessage(
                     'Current File Is Not MD File'
                 );
