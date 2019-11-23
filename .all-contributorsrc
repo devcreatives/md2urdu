@@ -26,6 +26,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "aliasgharkarani",
+      "name": "Ali Asghar Karani",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/33603201?v=4",
+      "profile": "https://aliasgharkarani.github.io/alikarani.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
