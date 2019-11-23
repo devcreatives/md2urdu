@@ -1,5 +1,5 @@
 # md2urdu (Visual Studio Code - Extension)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 ## Introduction
 
@@ -40,6 +40,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://viveksharmaui.js.org"><img src="https://avatars1.githubusercontent.com/u/28563357?v=4" width="100px;" alt="Vivek Anand Sharma"/><br /><sub><b>Vivek Anand Sharma</b></sub></a><br /><a href="#infra-viveksharmaui" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Tests">⚠️</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Code">💻</a> <a href="https://github.com/Techistan/md2urdu/commits?author=viveksharmaui" title="Documentation">📖</a> <a href="https://github.com/Techistan/md2urdu/issues?q=author%3Aviveksharmaui" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/MirFahad58"><img src="https://avatars1.githubusercontent.com/u/31244700?v=4" width="100px;" alt="Mir Fahad Talpur"/><br /><sub><b>Mir Fahad Talpur</b></sub></a><br /><a href="https://github.com/Techistan/md2urdu/commits?author=MirFahad58" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://aliasgharkarani.github.io/alikarani.com/"><img src="https://avatars0.githubusercontent.com/u/33603201?v=4" width="100px;" alt="Ali Asghar Karani"/><br /><sub><b>Ali Asghar Karani</b></sub></a><br /><a href="https://github.com/Techistan/md2urdu/commits?author=aliasgharkarani" title="Code">💻</a></td>
   </tr>
 </table>
 
