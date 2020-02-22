@@ -1,8 +1,6 @@
 # Change Log
 
-All notable changes to the "md2urdu" extension will be documented in this file.
-
-## md2urdu [1.2.0] (Unreleased) (Currently Working)
+All notable changes to the "md2urdu" will be documented in this file.
 
 ## md2urdu [1.1.0] (Released)
 - Added jest test cases unit/integration added by [@viveksharmaui](https://github.com/viveksharmaui).
