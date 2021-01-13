@@ -35,11 +35,21 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jmrchelani",
+      "name": "Milton",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/55441239?v=4",
+      "profile": "http://jmrchelani.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "md2urdu",
-  "projectOwner": "Techistan",
+  "projectOwner": "devcreatives",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "skipCi": true
 }
