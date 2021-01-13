@@ -1,8 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import fs from 'fs';
-import translate from '@vitalets/google-translate-api';
+const fs = require('fs');
+const translate = require('@vitalets/google-translate-api');
 const CheckFileType = require('./internal/checkFileType');
 const GetFileContent = require('./internal/getFileContent');
 const WriteFileContent = require('./internal/writeFileContent');
@@ -84,28 +84,26 @@ export function activate(context: vscode.ExtensionContext) {
                         //Used variables instead of re writing the event again and again it self.
                         let showInformationMessage = '';
                         if (writeData) {
-                            showInformationMessage = 'Successfully Converted MD File To Urdu';
-                        }
-                        else {
-                            showInformationMessage = 'Unable To Write Urdu Data In MD File';
+                            showInformationMessage =
+                                'Successfully Converted MD File To Urdu';
+                        } else {
+                            showInformationMessage =
+                                'Unable To Write Urdu Data In MD File';
                         }
                         vscode.window.showInformationMessage(
                             showInformationMessage
                         );
-                    }
-                    else {
+                    } else {
                         vscode.window.showInformationMessage(
                             'Unable To Translate MD File Data'
                         );
                     }
-                }
-                else {
+                } else {
                     vscode.window.showInformationMessage(
                         'Unable To Get MD File Data'
                     );
                 }
-            }
-            else {
+            } else {
                 vscode.window.showInformationMessage(
                     'Current File Is Not MD File'
                 );
